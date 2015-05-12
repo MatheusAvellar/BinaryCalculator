@@ -8,4 +8,4 @@ Summing up? It prompts you 3 times, and asks for the first number, the operation
 
 
 
-Important note: I will improve this :P
+Important note: I will improve this.
