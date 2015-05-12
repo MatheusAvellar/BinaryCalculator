@@ -11,7 +11,9 @@ Summing up? It prompts you 3 times, and asks for the first number, the operation
 
 
 Important note: This will be improved
+
 TODO:
+
     -Add a GUI
     -Make it resettable
     -Add more operations(?)
