@@ -1,3 +1,14 @@
+/*
+ * Script by Matheus Avellar
+ *   Binary Calculator
+ *
+ *                  fixNums()
+ *                     |
+ *                    for
+ *
+ */
+
+
 var n1 = "100"; // Binary numbers go here
 var n2 = "100"; // And here
 var ex = 0;
