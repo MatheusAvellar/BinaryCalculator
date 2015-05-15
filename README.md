@@ -1,5 +1,5 @@
 # Binary Calculator
-A Binary Calculator (sum/sub/mult/div) coded in Python
+A Binary Calculator (sum/sub/mult/div) coded in Python (and also an alternate version in  JavaScript for the lulz)
 
 (Made for Python 2.7 | Cannot assure it will work on 3.3 or pre 2.7 versions)
 
@@ -14,7 +14,7 @@ Important note: This will be improved
 
 TODO:
 
-    -Add a GUI
-    -Make it resettable
-    -Add the other operations (/ *)
-    -Fix the bug where it spams you with 0's if you input a number greater than 255 (11111111)
+    - Add a GUI
+    - Make it resettable
+    - Add the other operations (/ *)
+    - Fix the bug where it spams you with 0's if you input a number greater than 255 (11111111)
