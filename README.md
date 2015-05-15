@@ -16,5 +16,5 @@ TODO:
 
     -Add a GUI
     -Make it resettable
-    -Add the other operations (- / *)
+    -Add the other operations (/ *)
     -Fix the bug where it spams you with 0's if you input a number greater than 255 (11111111)
