@@ -3,11 +3,10 @@
  *   Binary Calculator
  */
 
-
-var n1 = "110";       // Binary numbers go here
-var n2 = "110";  // And here
+var n1 = "1101001";       // Binary numbers go here
+var n2 = "1011110";  // And here
 var ex = 0;
-var opr = "+";      // Operation ("+" or "-") goes here
+var opr = "*";      // Operation ("+" or "-") goes here
 var neg = " ";
 var res = "";
 
@@ -54,7 +53,51 @@ function invert() {
             }
             if (!i && ex) {  _1();  }
         };
-    }else {
+    }else if (opr == "*") {
+        var results = [];
+        for (var i = n2.length - 1; i >= 0; i--) {
+            for (var k = 1; k < n2.length - i; k++) {
+                if (typeof results[i] == "undefined") {  results[i] = "";  }
+                results[i] = "0" + results[i];
+                console.log("#1 " + results);
+            };
+
+            for (var j = n1.length - 1; j >= 0; j--) {
+                if (typeof results[i] == "undefined") {  results[i] = "";  }
+                var e = parseInt(n1[j]) * parseInt(n2[i]);
+
+                if (e == 1) {  results[i] = "1" + results[i];  }
+                else        {  results[i] = "0" + results[i];  }
+
+                if (!i && ex) {  _1();  }
+                console.log("#2 " + results);
+            };
+        };
+        console.log("#3 " + results);
+
+        var resultsBackup = results;
+
+        for (var l = 0; l < results.length; l++) {
+            for (var i = results[l].length - 1; i >= 0; i--) {
+                if (typeof results[l+1] != "undefined") {
+                    if (typeof results[l+1][i] != "undefined"){
+                        var e = parseInt(results[l][i]) + parseInt(results[l+1][i]) + ex;
+                        switch (e) {
+                            case 3:   results[l] = "1" + results[l]; ex = 1; break;
+                            case 2:   results[l] = "0" + results[l]; ex = 1; break;
+                            case 1:   results[l] = "1" + results[l]; ex = 0; break;
+                            default:  results[l] = "0" + results[l]; ex = 0; break;
+                        }
+                        if (!i && ex) {  _1();  }
+                    } else {
+                        results[l] = "1" + results[l];
+                    }
+                }
+            };
+        };
+        console.log("#4 " + results);
+        // Well crap, I got this array with a bunch of values I gotta add :l
+    } else {
         throw new TypeError('Use either "+" or "-" as the opr value');
     }
 })();
@@ -64,6 +107,9 @@ if (neg != " "){  invert(); res = neg + res;  }
 function c(number, baseFrom, baseTo) {
     return parseInt(number, baseFrom).toString(baseTo);
 }
+
+ /*
 console.log(n1 + "\n" + opr + n2 + "\n" + res);                               // Binary result
 console.log(c(n1, 2, 10) + "\n" + opr + c(n2, 2, 10) + "\n" + c(res, 2, 10)); // Decimal result
 console.log(c(n1, 2, 16) + "\n" + opr + c(n2, 2, 16) + "\n" + c(res, 2, 16)); // Hexadecimal result
+ */
