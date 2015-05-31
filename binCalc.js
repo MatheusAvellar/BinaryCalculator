@@ -6,7 +6,7 @@
 var n1 = "1101001";       // Binary numbers go here
 var n2 = "1011110";  // And here
 var ex = 0;
-var opr = "*";      // Operation ("+" or "-") goes here
+var opr = "+";      // Operation ("+" or "-") goes here
 var neg = " ";
 var res = "";
 
